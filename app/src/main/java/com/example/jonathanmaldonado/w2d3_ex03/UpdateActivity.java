@@ -48,7 +48,8 @@ public class UpdateActivity extends AppCompatActivity {
         if(TextUtils.isEmpty(updateNoteTitleUpdate.getText().toString())){
 
             updateNoteResult.setText("");
-            updateNoteResult.setText("fields can not be blank ");
+            updateNoteResult.setText(R.string.lbl_no_blank_fields);
+
 
         }else {
 

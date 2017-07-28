@@ -20,13 +20,13 @@
         android:layout_height="wrap_content" />
     <Button
         android:onClick="mySaveNote"
-        android:text="SAVE"
+        android:text="@string/lbl_save"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <TextView
         android:id="@+id/tv_saveNoteResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Result:"/>
+        android:text=""/>
 
 </LinearLayout>

@@ -10,7 +10,7 @@
 
     <Button
         android:onClick="myDeleteNote"
-        android:text="DELETE"
+        android:text="@string/lbl_delete"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -18,6 +18,6 @@
         android:id="@+id/tv_deleteResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Result:"/>
+        android:text=""/>
 
 </LinearLayout>

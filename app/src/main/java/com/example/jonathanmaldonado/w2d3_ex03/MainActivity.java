@@ -4,8 +4,10 @@ import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -17,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private SQLiteDatabase database;
 
     EditText titleET;
+    TextView result;
 
 
     @Override
@@ -29,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         titleET= (EditText) findViewById(R.id.et_title);
+        result= (TextView) findViewById(R.id.tv_result);
 
     }
 
@@ -60,20 +64,33 @@ public class MainActivity extends AppCompatActivity {
 
     public void myUpdateRecord(View view) {
 
+        if(TextUtils.isEmpty(titleET.getText().toString())){
 
-        Intent intent = new Intent(MainActivity.this , UpdateActivity.class);
-        String message=titleET.getText().toString();
-        intent.putExtra(MAIN_ACTIVITY_EXTRA, message);
-        startActivity(intent);
+            result.setText("");
+            result.setText(R.string.lbl_no_blank_fields);
+
+        }else {
+            Intent intent = new Intent(MainActivity.this, UpdateActivity.class);
+            String message = titleET.getText().toString();
+            intent.putExtra(MAIN_ACTIVITY_EXTRA, message);
+            startActivity(intent);
+        }
     }
 
     public void myDeleteRecord(View view) {
 
+        if(TextUtils.isEmpty(titleET.getText().toString())){
 
-        Intent intent = new Intent(MainActivity.this , DeleteActivity.class);
-        String message=titleET.getText().toString();
-        intent.putExtra(MAIN_ACTIVITY_EXTRA, message);
-        startActivity(intent);
+            result.setText("");
+            result.setText(R.string.lbl_no_blank_fields);
+
+        }else {
+
+            Intent intent = new Intent(MainActivity.this, DeleteActivity.class);
+            String message = titleET.getText().toString();
+            intent.putExtra(MAIN_ACTIVITY_EXTRA, message);
+            startActivity(intent);
+        }
     }
 
 }

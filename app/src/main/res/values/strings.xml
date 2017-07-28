@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">w2d3-ex03</string>
+    <string name="lbl_no_blank_fields">fields can not be blank</string>
+    <string name="lbl_update">UPDATE</string>
+    <string name="lbl_save">SAVE</string>
+    <string name="lbl_read">READ</string>
+    <string name="lbl_delete">DELETE</string>
 </resources>

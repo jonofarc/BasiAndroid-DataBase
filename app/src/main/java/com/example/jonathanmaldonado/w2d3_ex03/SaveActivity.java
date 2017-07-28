@@ -42,7 +42,7 @@ public class SaveActivity extends AppCompatActivity {
         if(TextUtils.isEmpty(saveNoteTitleET.getText().toString())){
 
             saveNoteResult.setText("");
-            saveNoteResult.setText("fields can not be blank ");
+            saveNoteResult.setText(R.string.lbl_no_blank_fields);
 
         }else{
 
