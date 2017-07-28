@@ -182,15 +182,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void mySaveRecord(View view) {
 
-        saveRecord();
+        //saveRecord();
         Intent intent = new Intent(MainActivity.this , SaveActivity.class);
         startActivity(intent);
     }
 
     public void myReadRecord(View view) {
-        readRecord();
-
-
+        //readRecord();
         Intent intent = new Intent(MainActivity.this , ReadActivity.class);
         startActivity(intent);
     }
@@ -200,7 +198,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void myDeleteRecord(View view) {
-        deleteRecords();
+
+       // deleteRecords();
+        Intent intent = new Intent(MainActivity.this , DeleteActivity.class);
+        String message=titleET.getText().toString();
+        intent.putExtra(MAIN_ACTIVITY_EXTRA, message);
+        startActivity(intent);
     }
     public void ClearFields(){
         subTitleET.setText("");

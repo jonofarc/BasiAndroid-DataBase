@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".SaveActivity" />
-        <activity android:name=".ReadActivity"></activity>
+        <activity android:name=".ReadActivity" />
+        <activity android:name=".DeleteActivity"></activity>
     </application>
 
 </manifest>
