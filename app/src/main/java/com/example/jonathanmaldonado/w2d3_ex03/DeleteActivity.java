@@ -50,11 +50,11 @@ public class DeleteActivity extends AppCompatActivity {
         );
         if(deleted>0){
             deleteNoteResult.setText("");
-            deleteNoteResult.setText("Record Deleted: "+" Title: "+ deleteNoteTitle.toString());
+            deleteNoteResult.setText("Note Deleted: "+" Title: "+ deleteNoteTitle.toString());
 
         }else{
             deleteNoteResult.setText("");
-            deleteNoteResult.setText("Record Not Deleted: "+" Title: "+ deleteNoteTitle.toString());
+            deleteNoteResult.setText("Note Not Deleted: "+" Title: "+ deleteNoteTitle.toString());
 
         }
 

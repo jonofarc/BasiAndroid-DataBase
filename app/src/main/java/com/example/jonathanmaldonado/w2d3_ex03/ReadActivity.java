@@ -66,7 +66,7 @@ public class ReadActivity extends AppCompatActivity {
 
 
 
-            newMessage += "readRecord id: "+ entryID+ " Title: "+ entryTitle+ " SubTitle "+entrySubTitle+"\n";
+            newMessage += "Note id: "+ entryID+ " Title: "+ entryTitle+ " Content "+entrySubTitle+"\n";
 
         }
 

@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -38,19 +39,31 @@ public class SaveActivity extends AppCompatActivity {
 
     private void saveRecord(){
 
+        if(TextUtils.isEmpty(saveNoteTitleET.getText().toString())){
 
-        String title =saveNoteTitleET.getText().toString();
-        String subtitle= saveNoteContentET.getText().toString();
-        ContentValues values= new ContentValues();
-        values.put(FeedReaderContract.FeedEntry.COLUMN_NAME_TITLE,title);
-        values.put(FeedReaderContract.FeedEntry.COLUMN_NAME_SUBTITLE,subtitle);
-        long recordId = database.insert(FeedReaderContract.FeedEntry.TABLE_NAME,null,values);
-        if (recordId>0){
-           // Log.d(TAG, "Record Saved");
             saveNoteResult.setText("");
-            saveNoteResult.setText("Note Saved: "+" Title: "+ saveNoteTitleET.getText().toString()+ " Content: "+ saveNoteContentET.getText().toString());
+            saveNoteResult.setText("fields can not be blank ");
+
+        }else{
+
+
+            String title =saveNoteTitleET.getText().toString();
+            String subtitle= saveNoteContentET.getText().toString();
+            ContentValues values= new ContentValues();
+            values.put(FeedReaderContract.FeedEntry.COLUMN_NAME_TITLE,title);
+            values.put(FeedReaderContract.FeedEntry.COLUMN_NAME_SUBTITLE,subtitle);
+            long recordId = database.insert(FeedReaderContract.FeedEntry.TABLE_NAME,null,values);
+            if (recordId>0){
+                // Log.d(TAG, "Record Saved");
+                saveNoteResult.setText("");
+                saveNoteResult.setText("Note Saved: "+" Title: "+ saveNoteTitleET.getText().toString()+ " Content: "+ saveNoteContentET.getText().toString());
+
+            }
+
 
         }
+
+
 
 
 
