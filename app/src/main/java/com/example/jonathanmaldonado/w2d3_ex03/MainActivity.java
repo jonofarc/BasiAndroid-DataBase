@@ -1,6 +1,7 @@
 package com.example.jonathanmaldonado.w2d3_ex03;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
@@ -178,7 +179,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void mySaveRecord(View view) {
+
         saveRecord();
+        Intent intent = new Intent(MainActivity.this , SaveActivity.class);
+        startActivity(intent);
     }
 
     public void myReadRecord(View view) {

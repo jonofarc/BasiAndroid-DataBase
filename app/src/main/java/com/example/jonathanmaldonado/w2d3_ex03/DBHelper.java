@@ -10,7 +10,7 @@ import com.example.jonathanmaldonado.w2d3_ex03.FeedReaderContract.FeedEntry;
 
 public class DBHelper extends SQLiteOpenHelper {
 
-    public static final int DATABASE_VERSION =3;
+    public static final int DATABASE_VERSION =4;
     public static final String DATABASE_NAME="mydatabase.db";
 
     public static  final String SQL_CREATE_ENTRIES = "CREATE TABLE "+
