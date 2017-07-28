@@ -194,7 +194,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void myUpdateRecord(View view) {
-        updateRecord();
+
+        //updateRecord();
+        Intent intent = new Intent(MainActivity.this , UpdateActivity.class);
+        String message=titleET.getText().toString();
+        intent.putExtra(MAIN_ACTIVITY_EXTRA, message);
+        startActivity(intent);
     }
 
     public void myDeleteRecord(View view) {

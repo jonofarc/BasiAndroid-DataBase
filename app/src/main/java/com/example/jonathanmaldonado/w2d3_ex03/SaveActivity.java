@@ -47,9 +47,10 @@ public class SaveActivity extends AppCompatActivity {
         long recordId = database.insert(FeedReaderContract.FeedEntry.TABLE_NAME,null,values);
         if (recordId>0){
            // Log.d(TAG, "Record Saved");
+            saveNoteResult.setText("");
+            saveNoteResult.setText("Note Saved: "+" Title: "+ saveNoteTitleET.getText().toString()+ " Content: "+ saveNoteContentET.getText().toString());
+
         }
-        saveNoteResult.setText("");
-        saveNoteResult.setText("Record Saved: "+" Title: "+ saveNoteTitleET.getText().toString()+ " SubTitle: "+ saveNoteContentET.getText().toString());
 
 
 
