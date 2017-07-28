@@ -15,6 +15,8 @@ import com.example.jonathanmaldonado.w2d3_ex03.FeedReaderContract.FeedEntry;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final String MAIN_ACTIVITY_EXTRA="com.example.jonathanmaldonado.w2d3_ex03.MAIN_ACTIVITY_EXTRA";
+
     private static final String TAG = MainActivity.class.getSimpleName()+"_TAG";
     private DBHelper helper;
     private SQLiteDatabase database;
@@ -187,6 +189,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void myReadRecord(View view) {
         readRecord();
+
+
+        Intent intent = new Intent(MainActivity.this , ReadActivity.class);
+        startActivity(intent);
     }
 
     public void myUpdateRecord(View view) {
